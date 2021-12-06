@@ -14,13 +14,18 @@ public class ObjectPool : MonoBehaviour
             return instance;
         }
     }
+
+    public string ROOM_ENEMY = "RoomEnemy";
+    public string BULLET_PISTAL = "BulletPistal";
+
+
     public PoolElement Room;
     public PoolElement BulletPistal;
     // Start is called before the first frame update
     void Start()
     {
-        Room.start(Resources.Load<GameObject>("RoomEnemy"));
-        BulletPistal.start(Resources.Load<GameObject>("BulletPistal"));
+        Room.start(Resources.Load<GameObject>(ROOM_ENEMY));
+        BulletPistal.start(Resources.Load<GameObject>(BULLET_PISTAL));
     }
 
     // Update is called once per frame
